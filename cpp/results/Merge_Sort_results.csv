@@ -1,5 +1,5 @@
-algorithm,input_type,size,avg_time,correct
-Merge Sort,sorted,1000,0.000212364,true
-Merge Sort,reversed,1000,0.000181227,true
-Merge Sort,random,1000,0.000236794,true
-Merge Sort,partially,1000,0.000204516,true
+algorithm,input_type,size,avg_time,stable,correct
+Merge Sort,sorted,1000,0.000213987,true,true
+Merge Sort,reversed,1000,0.000195492,true,true
+Merge Sort,random,1000,0.000254686,true,true
+Merge Sort,partially,1000,0.000225116,true,true

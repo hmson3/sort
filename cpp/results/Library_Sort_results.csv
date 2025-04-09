@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,stable,correct
+Library Sort,sorted,1000,0.00134689,false,true
+Library Sort,reversed,1000,0.0018526,false,true
+Library Sort,random,1000,0.00163286,false,true
+Library Sort,partially,1000,0.00137743,false,true

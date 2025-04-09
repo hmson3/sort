@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,stable,correct
+Insertion Sort,sorted,1000,4.9023e-06,true,true
+Insertion Sort,reversed,1000,0.00187983,true,true
+Insertion Sort,random,1000,0.000939404,true,true
+Insertion Sort,partially,1000,0.000241503,true,true

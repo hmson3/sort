@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,stable,correct
+Intro Sort,sorted,1000,0.000304826,false,true
+Intro Sort,reversed,1000,0.000243107,false,true
+Intro Sort,random,1000,9.20786e-05,false,true
+Intro Sort,partially,1000,0.00018252,false,true

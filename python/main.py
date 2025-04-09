@@ -12,17 +12,17 @@ os.makedirs(output_dir, exist_ok=True)
 
 # 정렬 알고리즘 목록
 algorithms = {
-    'Bubble Sort' : bubble_sort,
-    'Insertion Sort' : insertion_sort,
-    'Selection Sort' : selection_sort,
+    # 'Bubble Sort' : bubble_sort,
+    # 'Insertion Sort' : insertion_sort,
+    # 'Selection Sort' : selection_sort,
     #ok'Merge Sort' : merge_sort,
     #ok'Heap Sort' : heap_sort,
     #ok 'Quick Sort' : quick_sort,
 
     #ok 'Tim Sort' : tim_sort,
-    'Cocktail Shaker Sort' : cocktail_shaker_sort,
-    'Comb Sort' : comb_sort,
-    # 'Library Sort' : library_sort,
+    # 'Cocktail Shaker Sort' : cocktail_shaker_sort,
+    # 'Comb Sort' : comb_sort,
+    'Library Sort' : library_sort,
     #ok 'Tournament Sort' : tournament_sort,
     #ok 'Intro Sort' : intro_sort,
 }

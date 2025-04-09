@@ -1,5 +1,5 @@
-algorithm,input_type,size,avg_time,correct
-Selection Sort,sorted,1000,0.00129447,true
-Selection Sort,reversed,1000,0.00127947,true
-Selection Sort,random,1000,0.00132915,true
-Selection Sort,partially,1000,0.00129858,true
+algorithm,input_type,size,avg_time,stable,correct
+Selection Sort,sorted,1000,0.00147605,false,true
+Selection Sort,reversed,1000,0.00148882,false,true
+Selection Sort,random,1000,0.00161943,false,true
+Selection Sort,partially,1000,0.00144103,false,true

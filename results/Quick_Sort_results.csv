@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,stable,correct
+Quick Sort,sorted,1000,0.00378035,true,true
+Quick Sort,reversed,1000,0.0022906,true,true
+Quick Sort,random,1000,9.42677e-05,true,true
+Quick Sort,partially,1000,0.00113666,true,true

@@ -8,5 +8,5 @@ project(
   DESCRIPTION "sorting algorithms"
   LANGUAGES CXX)
 
-add_executable (main main.cpp sorts.cpp)
+add_executable (main main.cpp)
 target_compile_options(main PUBLIC -Wall -Werror)
