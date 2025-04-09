@@ -1,0 +1,17 @@
+algorithm,input_type,size,avg_time,correct
+Heap Sort,sorted,1000,0.001087,True
+Heap Sort,reversed,1000,0.000938,True
+Heap Sort,random,1000,0.00104,True
+Heap Sort,partially,1000,0.001087,True
+Heap Sort,sorted,10000,0.015338,True
+Heap Sort,reversed,10000,0.013826,True
+Heap Sort,random,10000,0.015014,True
+Heap Sort,partially,10000,0.015645,True
+Heap Sort,sorted,100000,0.204369,True
+Heap Sort,reversed,100000,0.186473,True
+Heap Sort,random,100000,0.205497,True
+Heap Sort,partially,100000,0.208528,True
+Heap Sort,sorted,1000000,2.506768,True
+Heap Sort,reversed,1000000,2.399993,True
+Heap Sort,random,1000000,2.969118,True
+Heap Sort,partially,1000000,2.857498,True

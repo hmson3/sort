@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,correct
+Cocktail Shaker Sort,sorted,1000,2.8e-05,True
+Cocktail Shaker Sort,reversed,1000,0.033368,True
+Cocktail Shaker Sort,random,1000,0.020614,True
+Cocktail Shaker Sort,partially,1000,0.008417,True

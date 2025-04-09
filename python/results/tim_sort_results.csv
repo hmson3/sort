@@ -1,0 +1,17 @@
+algorithm,input_type,size,avg_time,correct
+Tim Sort,sorted,1000,0.000329,True
+Tim Sort,reversed,1000,0.000986,True
+Tim Sort,random,1000,0.000763,True
+Tim Sort,partially,1000,0.000578,True
+Tim Sort,sorted,10000,0.005637,True
+Tim Sort,reversed,10000,0.012738,True
+Tim Sort,random,10000,0.010784,True
+Tim Sort,partially,10000,0.008115,True
+Tim Sort,sorted,100000,0.076758,True
+Tim Sort,reversed,100000,0.14892,True
+Tim Sort,random,100000,0.139499,True
+Tim Sort,partially,100000,0.107121,True
+Tim Sort,sorted,1000000,0.983531,True
+Tim Sort,reversed,1000000,1.708251,True
+Tim Sort,random,1000000,2.066928,True
+Tim Sort,partially,1000000,1.424513,True

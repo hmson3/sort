@@ -1,0 +1,17 @@
+algorithm,input_type,size,avg_time,correct
+Quick Sort,sorted,1000,0.000406,True
+Quick Sort,reversed,1000,0.000667,True
+Quick Sort,random,1000,0.000543,True
+Quick Sort,partially,1000,0.000492,True
+Quick Sort,sorted,10000,0.005857,True
+Quick Sort,reversed,10000,0.010075,True
+Quick Sort,random,10000,0.006746,True
+Quick Sort,partially,10000,0.006094,True
+Quick Sort,sorted,100000,0.069071,True
+Quick Sort,reversed,100000,0.134756,True
+Quick Sort,random,100000,0.083818,True
+Quick Sort,partially,100000,0.076312,True
+Quick Sort,sorted,1000000,0.772689,True
+Quick Sort,reversed,1000000,1.662794,True
+Quick Sort,random,1000000,1.133311,True
+Quick Sort,partially,1000000,0.932921,True

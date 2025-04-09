@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,correct
+Bubble Sort,sorted,1000,0.00138327,true
+Bubble Sort,reversed,1000,0.00411752,true
+Bubble Sort,random,1000,0.00288407,true
+Bubble Sort,partially,1000,0.00166665,true

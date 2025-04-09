@@ -1,5 +1,0 @@
-algorithm,input_type,size,avg_time,correct
-Insertion Sort,sorted,1000,5e-05,True
-Insertion Sort,reversed,1000,0.021568,True
-Insertion Sort,random,1000,0.011633,True
-Insertion Sort,partially,1000,0.003165,True

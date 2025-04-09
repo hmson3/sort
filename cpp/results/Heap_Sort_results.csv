@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,correct
+Heap Sort,sorted,1000,0.000159648,true
+Heap Sort,reversed,1000,0.000120146,true
+Heap Sort,random,1000,0.000169955,true
+Heap Sort,partially,1000,0.000166655,true

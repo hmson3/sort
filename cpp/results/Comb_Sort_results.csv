@@ -1,0 +1,5 @@
+algorithm,input_type,size,avg_time,correct
+Comb Sort,sorted,1000,5.03169e-05,true
+Comb Sort,reversed,1000,6.65394e-05,true
+Comb Sort,random,1000,0.000140396,true
+Comb Sort,partially,1000,9.16217e-05,true

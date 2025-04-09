@@ -1,0 +1,17 @@
+algorithm,input_type,size,avg_time,correct
+Merge Sort,sorted,1000,0.000609,True
+Merge Sort,reversed,1000,0.000617,True
+Merge Sort,random,1000,0.000896,True
+Merge Sort,partially,1000,0.000678,True
+Merge Sort,sorted,10000,0.006967,True
+Merge Sort,reversed,10000,0.00709,True
+Merge Sort,random,10000,0.011071,True
+Merge Sort,partially,10000,0.0086,True
+Merge Sort,sorted,100000,0.082687,True
+Merge Sort,reversed,100000,0.08386,True
+Merge Sort,random,100000,0.139955,True
+Merge Sort,partially,100000,0.107733,True
+Merge Sort,sorted,1000000,0.9755,True
+Merge Sort,reversed,1000000,0.986524,True
+Merge Sort,random,1000000,2.168634,True
+Merge Sort,partially,1000000,1.433205,True

@@ -5,19 +5,26 @@ import csv
 from collections import defaultdict
 from tqdm import tqdm
 import os
-from sorts import bubble_sort, insertion_sort, selection_sort, merge_sort, heap_sort, tim_sort  # 정렬 함수 분리
+from sorts import bubble_sort, insertion_sort, selection_sort, merge_sort, heap_sort, quick_sort, tim_sort, cocktail_shaker_sort, comb_sort, library_sort, tournament_sort, intro_sort   # 정렬 함수 분리
 
-output_dir = "results"
+output_dir = "python/results"
 os.makedirs(output_dir, exist_ok=True)
 
 # 정렬 알고리즘 목록
 algorithms = {
-    'Bubble Sort': bubble_sort,
+    'Bubble Sort' : bubble_sort,
     'Insertion Sort' : insertion_sort,
     'Selection Sort' : selection_sort,
-    'Merge Sort' : merge_sort,
-    'Heap Sort' : heap_sort,
-    'Tim Sort': tim_sort,
+    #ok'Merge Sort' : merge_sort,
+    #ok'Heap Sort' : heap_sort,
+    #ok 'Quick Sort' : quick_sort,
+
+    #ok 'Tim Sort' : tim_sort,
+    'Cocktail Shaker Sort' : cocktail_shaker_sort,
+    'Comb Sort' : comb_sort,
+    # 'Library Sort' : library_sort,
+    #ok 'Tournament Sort' : tournament_sort,
+    #ok 'Intro Sort' : intro_sort,
 }
 
 # 입력 크기 및 유형
@@ -83,6 +90,12 @@ for alg_name, alg_fn in algorithms.items():
 
                 if test_data != expected:
                     correct = False
+
+                # ⛔ 1회 실행 결과가 1분 초과되면 반복 중단
+                if run == 0 and t > 60:
+                    progress_bar.update(9)
+                    print(f"⚠️ Skipping remaining runs for {alg_name} | size: {size}, type: {itype} (took {t:.2f}s)")
+                    break
 
             avg_time = sum(times) / len(times)
             results.append({
