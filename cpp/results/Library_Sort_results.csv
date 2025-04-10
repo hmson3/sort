@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Library Sort,sorted,1000,0.00134689,false,true
-Library Sort,reversed,1000,0.0018526,false,true
-Library Sort,random,1000,0.00163286,false,true
-Library Sort,partially,1000,0.00137743,false,true
+Library Sort,sorted,1000,0.00125277,false,true
+Library Sort,reversed,1000,0.00164596,false,true
+Library Sort,random,1000,0.00147723,false,true
+Library Sort,partially,1000,0.00131844,false,true
+Library Sort,sorted,10000,0.120584,false,true
+Library Sort,reversed,10000,0.168021,false,true
+Library Sort,random,10000,0.142893,false,true
+Library Sort,partially,10000,0.125757,false,true
+Library Sort,sorted,100000,11.9683,false,true
+Library Sort,reversed,100000,16.3296,false,true
+Library Sort,random,100000,14.159,false,true
+Library Sort,partially,100000,12.4993,false,true
+Library Sort,sorted,1000000,1196.92,false,true
+Library Sort,reversed,1000000,1703.16,false,true
+Library Sort,random,1000000,1459.3,false,true
+Library Sort,partially,1000000,1266.39,false,true

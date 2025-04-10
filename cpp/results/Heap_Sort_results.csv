@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Heap Sort,sorted,1000,0.000151638,false,true
-Heap Sort,reversed,1000,0.000121494,false,true
-Heap Sort,random,1000,0.000172034,false,true
-Heap Sort,partially,1000,0.000174076,false,true
+Heap Sort,sorted,1000,0.000169831,false,true
+Heap Sort,reversed,1000,0.000128796,false,true
+Heap Sort,random,1000,0.000190151,false,true
+Heap Sort,partially,1000,0.000175574,false,true
+Heap Sort,sorted,10000,0.00210156,false,true
+Heap Sort,reversed,10000,0.00202356,false,true
+Heap Sort,random,10000,0.00235157,false,true
+Heap Sort,partially,10000,0.00233982,false,true
+Heap Sort,sorted,100000,0.025234,false,true
+Heap Sort,reversed,100000,0.0243075,false,true
+Heap Sort,random,100000,0.0301046,false,true
+Heap Sort,partially,100000,0.0296165,false,true
+Heap Sort,sorted,1000000,0.0807058,false,true
+Heap Sort,reversed,1000000,0.289044,false,true
+Heap Sort,random,1000000,0.382014,false,true
+Heap Sort,partially,1000000,0.374,false,true

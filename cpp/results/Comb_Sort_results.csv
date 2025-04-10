@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Comb Sort,sorted,1000,5.03697e-05,false,true
-Comb Sort,reversed,1000,6.8705e-05,false,true
-Comb Sort,random,1000,0.000143084,false,true
-Comb Sort,partially,1000,9.62414e-05,false,true
+Comb Sort,sorted,1000,4.81884e-05,false,true
+Comb Sort,reversed,1000,6.26066e-05,false,true
+Comb Sort,random,1000,0.000132949,false,true
+Comb Sort,partially,1000,9.11293e-05,false,true
+Comb Sort,sorted,10000,0.00071338,false,true
+Comb Sort,reversed,10000,0.000912388,false,true
+Comb Sort,random,10000,0.0019121,false,true
+Comb Sort,partially,10000,0.00132552,false,true
+Comb Sort,sorted,100000,0.00917016,false,true
+Comb Sort,reversed,100000,0.0116202,false,true
+Comb Sort,random,100000,0.0244584,false,true
+Comb Sort,partially,100000,0.0166997,false,true
+Comb Sort,sorted,1000000,0.11321,false,true
+Comb Sort,reversed,1000000,0.135409,false,true
+Comb Sort,random,1000000,0.290536,false,true
+Comb Sort,partially,1000000,0.204281,false,true

@@ -76,18 +76,18 @@ int main() {
     filesystem::create_directories("./results");
 
     vector<pair<string, void(*)(vector<int>&)>> algorithms = {
-        {"Bubble Sort", bubbleSort},
-        {"Insertion Sort", insertionSort},
-        {"Selection Sort", selectionSort},
-        {"Merge Sort", mergeSort},
-        {"Heap Sort", heapSort},
-        {"Quick Sort", quickSort}, 
-        {"Cocktail Shaker Sort", cocktailShakerSort},
+        //{"Bubble Sort", bubbleSort},
+        //{"Insertion Sort", insertionSort},
+        //{"Selection Sort", selectionSort},
+        //{"Merge Sort", mergeSort},
+        //{"Heap Sort", heapSort},
+        //{"Quick Sort", quickSort}, 
+        //{"Cocktail Shaker Sort", cocktailShakerSort},
         {"Comb Sort", combSort},
-        {"Tournament Sort", tournament_sort},
-        {"Intro Sort", introSort},
-        {"Library Sort", librarySort},
-        {"Tim Sort", timSort},
+        //{"Tournament Sort", tournament_sort},
+        //{"Intro Sort", introSort},
+        //{"Library Sort", librarySort},
+        //{"Tim Sort", timSort},
     };
 
     vector<int> sizes = {1000, 10000, 100000, 1000000};

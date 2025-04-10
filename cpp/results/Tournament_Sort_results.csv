@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Tournament Sort,sorted,1000,9.29135e-05,true,true
-Tournament Sort,reversed,1000,9.35574e-05,true,true
-Tournament Sort,random,1000,0.000178205,true,true
-Tournament Sort,partially,1000,0.000138134,true,true
+Tournament Sort,sorted,1000,0.000104241,true,true
+Tournament Sort,reversed,1000,9.10521e-05,true,true
+Tournament Sort,random,1000,0.000178041,true,true
+Tournament Sort,partially,1000,0.000145276,true,true
+Tournament Sort,sorted,10000,0.00168966,true,true
+Tournament Sort,reversed,10000,0.00166815,true,true
+Tournament Sort,random,10000,0.0024622,true,true
+Tournament Sort,partially,10000,0.002056,true,true
+Tournament Sort,sorted,100000,0.0180965,true,true
+Tournament Sort,reversed,100000,0.0179477,true,true
+Tournament Sort,random,100000,0.029757,true,true
+Tournament Sort,partially,100000,0.0234535,true,true
+Tournament Sort,sorted,1000000,0.198214,true,true
+Tournament Sort,reversed,1000000,0.196169,true,true
+Tournament Sort,random,1000000,0.374367,true,true
+Tournament Sort,partially,1000000,0.2705,true,true

@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Cocktail Shaker Sort,sorted,1000,2.6841e-06,true,true
-Cocktail Shaker Sort,reversed,1000,0.0042684,true,true
-Cocktail Shaker Sort,random,1000,0.00266799,true,true
-Cocktail Shaker Sort,partially,1000,0.0010112,true,true
+Cocktail Shaker Sort,sorted,1000,2.9205e-06,true,true
+Cocktail Shaker Sort,reversed,1000,0.00416965,true,true
+Cocktail Shaker Sort,random,1000,0.00262976,true,true
+Cocktail Shaker Sort,partially,1000,0.000986936,true,true
+Cocktail Shaker Sort,sorted,10000,3.02099e-05,true,true
+Cocktail Shaker Sort,reversed,10000,0.416468,true,true
+Cocktail Shaker Sort,random,10000,0.251007,true,true
+Cocktail Shaker Sort,partially,10000,0.0942899,true,true
+Cocktail Shaker Sort,sorted,100000,0.000250969,true,true
+Cocktail Shaker Sort,reversed,100000,37.3579,true,true
+Cocktail Shaker Sort,random,100000,28.9119,true,true
+Cocktail Shaker Sort,partially,100000,9.52042,true,true
+Cocktail Shaker Sort,sorted,1000000,0.00246994,true,true
+Cocktail Shaker Sort,reversed,1000000,3640.36,true,true
+Cocktail Shaker Sort,random,1000000,2952.14,true,true
+Cocktail Shaker Sort,partially,1000000,1029.4,true,true

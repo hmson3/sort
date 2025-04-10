@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Bubble Sort,sorted,1000,0.00139817,true,true
-Bubble Sort,reversed,1000,0.00436169,true,true
-Bubble Sort,random,1000,0.00341594,true,true
-Bubble Sort,partially,1000,0.00182769,true,true
+Bubble Sort,sorted,1000,0.00144324,true,true
+Bubble Sort,reversed,1000,0.00465295,true,true
+Bubble Sort,random,1000,0.0033134,true,true
+Bubble Sort,partially,1000,0.00195317,true,true
+Bubble Sort,sorted,10000,0.144198,true,true
+Bubble Sort,reversed,10000,0.467247,true,true
+Bubble Sort,random,10000,0.315084,true,true
+Bubble Sort,partially,10000,0.188806,true,true
+Bubble Sort,sorted,100000,13.3843,true,true
+Bubble Sort,reversed,100000,43.6808,true,true
+Bubble Sort,random,100000,33.9531,true,true
+Bubble Sort,partially,100000,17.3451,true,true
+Bubble Sort,sorted,1000000,1337.67,true,true
+Bubble Sort,reversed,1000000,4390.5,true,true
+Bubble Sort,random,1000000,4059.26,true,true
+Bubble Sort,partially,1000000,2003.81,true,true

@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Intro Sort,sorted,1000,0.000304826,false,true
-Intro Sort,reversed,1000,0.000243107,false,true
-Intro Sort,random,1000,9.20786e-05,false,true
-Intro Sort,partially,1000,0.00018252,false,true
+Intro Sort,sorted,1000,0.00046884,false,true
+Intro Sort,reversed,1000,0.000210524,false,true
+Intro Sort,random,1000,8.58185e-05,false,true
+Intro Sort,partially,1000,0.00020325,false,true
+Intro Sort,sorted,10000,0.00417454,false,true
+Intro Sort,reversed,10000,0.0033732,false,true
+Intro Sort,random,10000,0.00124049,false,true
+Intro Sort,partially,10000,0.00258723,false,true
+Intro Sort,sorted,100000,0.0505546,false,true
+Intro Sort,reversed,100000,0.0405742,false,true
+Intro Sort,random,100000,0.0156888,false,true
+Intro Sort,partially,100000,0.0317615,false,true
+Intro Sort,sorted,1000000,0.590698,false,true
+Intro Sort,reversed,1000000,0.480387,false,true
+Intro Sort,random,1000000,0.191739,false,true
+Intro Sort,partially,1000000,0.153895,false,true

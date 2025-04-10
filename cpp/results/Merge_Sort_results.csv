@@ -1,5 +1,17 @@
 algorithm,input_type,size,avg_time,stable,correct
-Merge Sort,sorted,1000,0.000213987,true,true
-Merge Sort,reversed,1000,0.000195492,true,true
-Merge Sort,random,1000,0.000254686,true,true
-Merge Sort,partially,1000,0.000225116,true,true
+Merge Sort,sorted,1000,0.000203176,true,true
+Merge Sort,reversed,1000,0.000200121,true,true
+Merge Sort,random,1000,0.000250864,true,true
+Merge Sort,partially,1000,0.000221837,true,true
+Merge Sort,sorted,10000,0.00222912,true,true
+Merge Sort,reversed,10000,0.00223159,true,true
+Merge Sort,random,10000,0.0030172,true,true
+Merge Sort,partially,10000,0.00258704,true,true
+Merge Sort,sorted,100000,0.0247987,true,true
+Merge Sort,reversed,100000,0.0247161,true,true
+Merge Sort,random,100000,0.0342597,true,true
+Merge Sort,partially,100000,0.0290236,true,true
+Merge Sort,sorted,1000000,0.266089,true,true
+Merge Sort,reversed,1000000,0.268432,true,true
+Merge Sort,random,1000000,0.386038,true,true
+Merge Sort,partially,1000000,0.324872,true,true

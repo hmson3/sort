@@ -137,8 +137,18 @@ void heapSort(vector<int>& arr) {
 }
 
 // Quick Sort
+int medianOfThree(vector<int>& arr, int low, int high) {
+    int mid = low + (high - low) / 2;
+    if (arr[low] > arr[mid]) swap(arr[low], arr[mid]);
+    if (arr[low] > arr[high]) swap(arr[low], arr[high]);
+    if (arr[mid] > arr[high]) swap(arr[mid], arr[high]);
+    return mid;
+}
+
 int partition(vector<int>& arr, int low, int high) {
-   int pivot = arr[high];
+    int pivot_index = medianOfThree(arr, low, high);
+    swap(arr[pivot_index], arr[high]); // 피벗을 마지막으로 이동
+    int pivot = arr[high];
     int i = low;
     for (int j = low; j < high; j++) {
         if (arr[j] < pivot) {
