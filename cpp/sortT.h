@@ -298,47 +298,73 @@ void introSortT(vector<pair<int, int>>& arr) {
 // Library Sort
 void librarySortT(vector<pair<int, int>>& arr) {
     int n = arr.size();
-    int m = 2 * n;
-    const pair<int, int> INF = {numeric_limits<int>::max(), numeric_limits<int>::max()};
-
-    vector<pair<int, int>> output(m, INF);
+    int m = 2 * n;  // size with gaps
+    vector<pair<int, int>> output(m, {INF, INF});  // {value, original_idx}
     int count = 0;
 
-    for (int i = 0; i < n; ++i) {
-        auto x = arr[i];
-
-        // 순차적으로 삽입 위치 탐색 (첫 번째 원소만 비교)
-        int j = 0;
-        int num_seen = 0;
-        while (j < m && num_seen < count) {
-            if (output[j] != INF) {
-                if (output[j].first >= x.first) break;
-                num_seen++;
+    // Binary search for stable insertion considering original index as tiebreaker
+    auto find_pos = [&](int x, int idx) {
+        int left = 0, right = m - 1, res = m;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            // Compare value first, and if equal, compare original index
+            if (output[mid].first == INF || output[mid] > make_pair(x, idx)) {
+                res = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
             }
-            j++;
         }
+        return res;
+    };
 
-        // 오른쪽으로 GAP 찾기
-        int insert_pos = j;
-        while (insert_pos < m && output[insert_pos] != INF)
+    // Rebalance to preserve gaps
+    auto rebalance = [&]() {
+        vector<pair<int, int>> temp(m, {INF, INF});
+        int gap = 2;
+        int idx = gap;
+        for (auto& v : output) {
+            if (v.first != INF) {
+                if (idx >= m) throw runtime_error("Overflow during rebalance");
+                temp[idx] = v;
+                idx += gap;
+            }
+        }
+        output = temp;
+    };
+
+    for (int i = 0; i < n; ++i) {
+        int x = arr[i].first;  // value
+        int idx = arr[i].second;  // original index
+        int pos = find_pos(x, idx);  // Find the stable position considering the original index
+
+        // Find the right gap
+        int insert_pos = pos;
+        while (insert_pos < m && output[insert_pos].first != INF)
             insert_pos++;
 
-        if (insert_pos == m)
-            throw runtime_error("No space to insert");
+        if (insert_pos == m) {
+            rebalance();
+            insert_pos = find_pos(x, idx);
+            while (insert_pos < m && output[insert_pos].first != INF)
+                insert_pos++;
+            if (insert_pos == m)
+                throw runtime_error("Still no gap after rebalance");
+        }
 
-        // 오른쪽으로 shift
-        for (int k = insert_pos; k > j; --k)
+        // Shift elements to the right to make space
+        for (int k = insert_pos; k > pos; --k)
             output[k] = output[k - 1];
 
-        output[j] = x;
+        output[pos] = {x, idx};  // Insert the value with its original index
         count++;
     }
 
-    // 결과 복사
+    // Copy result back to arr
     int idx = 0;
-    for (int i = 0; i < m; ++i)
-        if (output[i] != INF)
-            arr[idx++] = output[i];
+    for (auto& v : output)
+        if (v.first != INF)
+            arr[idx++] = v;
 }
 
 // 최소 run 길이(minRun) 계산: n이 충분히 크면 낮은 비트를 r에 누적하여 반환

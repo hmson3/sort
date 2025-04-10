@@ -11,3 +11,5 @@ Bubble Sort, reversed, 100000, 39.6548 sec, true
 Bubble Sort, random, 100000, 35.1372 sec, true
 Bubble Sort, partially, 100000, 16.9778 sec, true
 std::vector of length 1000, capacity 1000std::vector of length 1000, capacity 1000
+
+Library Sort,partially,1000000,304.335,true,true
