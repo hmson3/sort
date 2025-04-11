@@ -1,5 +1,0 @@
-algorithm,input_type,size,avg_time,stable,correct
-Tournament Sort,sorted,1000,0.000101739,true,true
-Tournament Sort,reversed,1000,9.07852e-05,true,true
-Tournament Sort,random,1000,0.00017634,true,true
-Tournament Sort,partially,1000,0.000135717,true,true

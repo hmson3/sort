@@ -1,5 +1,0 @@
-algorithm,input_type,size,avg_time,stable,correct
-Cocktail Shaker Sort,sorted,1000,3.2612e-06,true,true
-Cocktail Shaker Sort,reversed,1000,0.00428871,true,true
-Cocktail Shaker Sort,random,1000,0.00270398,true,true
-Cocktail Shaker Sort,partially,1000,0.00105683,true,true

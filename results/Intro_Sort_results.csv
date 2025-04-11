@@ -1,5 +1,0 @@
-algorithm,input_type,size,avg_time,stable,correct
-Intro Sort,sorted,1000,0.000368628,true,true
-Intro Sort,reversed,1000,0.000242541,true,true
-Intro Sort,random,1000,9.11212e-05,true,true
-Intro Sort,partially,1000,0.000182754,true,true

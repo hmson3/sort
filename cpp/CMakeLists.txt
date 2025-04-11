@@ -10,3 +10,6 @@ project(
 
 add_executable (main main.cpp)
 target_compile_options(main PUBLIC -Wall -Werror)
+
+add_executable (median median_of_k.cpp)
+target_compile_options(median PUBLIC -Wall -Werror)

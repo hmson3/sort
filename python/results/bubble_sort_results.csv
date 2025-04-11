@@ -1,5 +1,0 @@
-algorithm,input_type,size,avg_time,correct
-Bubble Sort,sorted,1000,2.9e-05,True
-Bubble Sort,reversed,1000,0.030529,True
-Bubble Sort,random,1000,0.022624,True
-Bubble Sort,partially,1000,0.011856,True

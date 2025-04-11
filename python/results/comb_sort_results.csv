@@ -1,5 +1,0 @@
-algorithm,input_type,size,avg_time,correct
-Comb Sort,sorted,1000,0.000838,True
-Comb Sort,reversed,1000,0.000975,True
-Comb Sort,random,1000,0.001212,True
-Comb Sort,partially,1000,0.001147,True

@@ -83,7 +83,7 @@ int main() {
         //{"Heap Sort", heapSort},
         //{"Quick Sort", quickSort}, 
         //{"Cocktail Shaker Sort", cocktailShakerSort},
-        {"Comb Sort", combSort},
+        //{"Comb Sort", combSort},
         //{"Tournament Sort", tournament_sort},
         //{"Intro Sort", introSort},
         //{"Library Sort", librarySort},
