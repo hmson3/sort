@@ -68,8 +68,8 @@ void quickSort(vector<int>& arr, int low, int high, int k) {
 }
 
 int main() {
-    vector<int> ns = {1000, 10000, 100000, 1000000};
-    vector<int> ks = {3, 5, 7, 9, 11};
+    vector<int> ns = {100, 1000, 10000, 100000, 1000000};
+    vector<int> ks = {3, 5, 7, 9, 11, 13, 15, 17, 19, 21};
     vector<string> types = {"sorted", "reversed", "random", "partial"};
 
     ofstream fout("median_of_k_result.csv");
@@ -78,15 +78,19 @@ int main() {
     for (int n : ns) {
         for (int k : ks) {
             for (int t = 0; t < 4; t++) {
-                vector<int> arr(n);
-                generateInput(arr, t);
+                double total_time = 0;
+                for (int trial = 0; trial < 10; trial++) {
+                    vector<int> arr(n);
+                    generateInput(arr, t);
 
-                auto start = high_resolution_clock::now();
-                quickSort(arr, 0, n - 1, k);
-                auto end = high_resolution_clock::now();
-                auto duration = duration_cast<microseconds>(end - start);
+                    auto start = high_resolution_clock::now();
+                    quickSort(arr, 0, n - 1, k);
+                    auto end = high_resolution_clock::now();
+                    auto duration = duration_cast<microseconds>(end - start);
 
-                fout << n << "," << k << "," << types[t] << "," << duration.count() / 1000000.0 << "\n";
+                    total_time += duration.count() / 1000000.0;
+                }
+                fout << n << "," << k << "," << types[t] << "," << total_time / 10.0 << "\n";
             }
         }
     }

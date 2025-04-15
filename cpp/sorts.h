@@ -61,8 +61,8 @@ void selectionSort(vector<int>& arr) {
 
 // Merge Sort
 void merge(vector<int>& arr, int left, int mid, int right) {
-    int n1 = mid - left + 1; // 왼쪽 배열 크기
-    int n2 = right - mid;    // 오른쪽 배열 크기
+    int n1 = mid - left + 1; 
+    int n2 = right - mid; 
 
     vector<int> L(n1), R(n2);
     for (int i = 0; i < n1; ++i)
@@ -341,14 +341,13 @@ void introSort(vector<int>& arr) {
     introsortUtil(arr, 0, n - 1, max_depth);
 }
 
-// Library Sort
 const int INF = numeric_limits<int>::max();
 
-// Stable Library Sort (Gap + Binary Search + Rebalance)
+//Library Sort
 void librarySort(vector<int>& arr) {
     int n = arr.size();
-    int m = 2 * n;  // size with gaps
-    vector<pair<int, int>> output(m, {INF, INF});  // {value, original_idx}
+    int m = 2 * n;
+    vector<pair<int, int>> output(m, {INF, INF}); 
     int count = 0;
 
     auto find_pos = [&](int x, int idx) {
@@ -383,7 +382,7 @@ void librarySort(vector<int>& arr) {
         int x = arr[i];
         int pos = find_pos(x, i);
 
-        // find right gap
+
         int insert_pos = pos;
         while (insert_pos < m && output[insert_pos].first != INF)
             insert_pos++;
@@ -397,7 +396,6 @@ void librarySort(vector<int>& arr) {
                 throw runtime_error("Still no gap after rebalance");
         }
 
-        // shift
         for (int k = insert_pos; k > pos; --k)
             output[k] = output[k - 1];
 
@@ -405,14 +403,12 @@ void librarySort(vector<int>& arr) {
         count++;
     }
 
-    // copy back
     int idx = 0;
     for (auto& v : output)
         if (v.first != INF)
             arr[idx++] = v.first;
 }
 
-// 최소 run 길이(minRun) 계산: n이 충분히 크면 낮은 비트를 r에 누적하여 반환
 int computeMinRun(int n) {
     int r = 0;
     while (n >= 64) {
@@ -423,15 +419,13 @@ int computeMinRun(int n) {
 }
 
 // Galloping Mode를 적용한 Merge 함수
-// arr[left...mid]와 arr[mid+1...right]는 이미 정렬되어 있음
 void gallopMerge(vector<int>& arr, int left, int mid, int right) {
     vector<int> L(arr.begin() + left, arr.begin() + mid + 1);
     vector<int> R(arr.begin() + mid + 1, arr.begin() + right + 1);
     int i = 0, j = 0, k = left;
-    const int minGallop = 7;  // 갤러핑 임계치
+    const int minGallop = 7;
     while (i < L.size() && j < R.size()) {
         int count1 = 0, count2 = 0;
-        // 일반 병합: 한쪽이 연속으로 승리할 때까지 진행
         while (i < L.size() && j < R.size()) {
             if (L[i] <= R[j]) {
                 arr[k++] = L[i++];
@@ -445,7 +439,7 @@ void gallopMerge(vector<int>& arr, int left, int mid, int right) {
                 if (count2 >= minGallop) break;
             }
         }
-        // 만약 L가 연속해서 승리했으면, 갤럽 모드 적용(upper_bound 사용)
+        // L 연속 
         if (i < L.size() && j < R.size() && count1 >= minGallop) {
             auto pos = upper_bound(L.begin() + i, L.end(), R[j]);
             int num = pos - (L.begin() + i);
@@ -454,7 +448,7 @@ void gallopMerge(vector<int>& arr, int left, int mid, int right) {
             i += num;
             continue;
         }
-        // 반대로 R가 연속해서 승리한 경우 (lower_bound 사용)
+        // R 연속
         if (i < L.size() && j < R.size() && count2 >= minGallop) {
             auto pos = lower_bound(R.begin() + j, R.end(), L[i]);
             int num = pos - (R.begin() + j);
@@ -464,20 +458,18 @@ void gallopMerge(vector<int>& arr, int left, int mid, int right) {
             continue;
         }
     }
-    // 남은 요소 복사
     while (i < L.size())
         arr[k++] = L[i++];
     while (j < R.size())
         arr[k++] = R[j++];
 }
 
-// run 정보를 담는 구조체
 struct Run {
     int start;
     int length;
 };
 
-// 최적화된 Tim Sort (Galloping Mode 포함)
+// Tim Sort
 void timSort(vector<int>& arr) {
     int n = arr.size();
     if (n < 2) return;
@@ -488,22 +480,22 @@ void timSort(vector<int>& arr) {
     int i = 0;
     while (i < n) {
         int runStart = i;
-        i++; // 최소 run 길이는 1부터 시작
+        i++;
         if (i == n) {
             runs.push_back({runStart, 1});
             break;
         }
-        // run의 방향 결정: 오름차순 또는 내림차순 run을 찾음
-        if (arr[i - 1] <= arr[i]) { // 오름차순 run
+      
+        if (arr[i - 1] <= arr[i]) { 
             while (i < n && arr[i - 1] <= arr[i])
                 i++;
-        } else { // 내림차순 run → reverse하여 오름차순으로 변경
+        } else { 
             while (i < n && arr[i - 1] > arr[i])
                 i++;
             reverse(arr.begin() + runStart, arr.begin() + i);
         }
         int runLen = i - runStart;
-        // run 길이가 minRun보다 짧으면, minRun 길이까지 확장 (혹은 배열 끝까지)
+        
         if (runLen < minRun) {
             int end = min(n, runStart + minRun);
             _insertionSort(arr, runStart, end - 1);
@@ -523,7 +515,7 @@ void timSort(vector<int>& arr) {
                 int end = runs[j + 1].start + runs[j + 1].length - 1;
                 gallopMerge(arr, start, mid, end);
                 newRuns.push_back({start, runs[j].length + runs[j + 1].length});
-            } else {  // 홀수개 run은 그대로 유지
+            } else {  
                 newRuns.push_back(runs[j]);
             }
         }
